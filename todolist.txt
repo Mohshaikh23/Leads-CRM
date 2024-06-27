@@ -1,0 +1,18 @@
+To Do List
+
+- Create Environment - Done
+- Install Django - Done
+- Create Project - Done
+- Create Base Pages / Template -Done
+    - Create app for Pages - Done
+    - Create Base Template - Done
+    - Create Front Page - Done
+    - Create About Page - Done
+- Authentication
+- Simple Dashboard
+- Create New Leads
+- Change and Delete Leads
+- Convert leads into Clients
+- Implement Solution for Teams
+- Implement a payment Solution / Monthly Recurring Payemnts
+- Deploy
