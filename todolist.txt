@@ -8,9 +8,14 @@ To Do List
     - Create Base Template - Done
     - Create Front Page - Done
     - Create About Page - Done
-- Authentication
-- Simple Dashboard
-- Create New Leads
+- Authentication - Done
+- Simple Dashboard - Done
+- Create New Leads -Done
+    - New Django app - Done
+    - Database models - Done
+    - Views forms for leads
+    - List out leads
+    - View details page of leads
 - Change and Delete Leads
 - Convert leads into Clients
 - Implement Solution for Teams

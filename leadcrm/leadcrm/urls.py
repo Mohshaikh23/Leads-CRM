@@ -25,6 +25,7 @@ from userprofile.views import signup
 urlpatterns = [
     path("", index, name='index'),
     path("dashboard/", include('dashboard.urls')),
+    path("dashboard/lead", include('lead.urls')),
     path("signup/", signup, name='signup'),
     path("about/", about, name='about'),
     path("login/", views.LoginView.as_view(template_name ='userprofile/login.html'), name='login'),
