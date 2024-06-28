@@ -17,7 +17,9 @@ To Do List
     - List out leads - Done
     - View details page of leads - Done
 - Change and Delete Leads - Done
-- Convert leads into Clients
+- Convert leads into Clients - Done
+- Show List of Clients
+- Show details page of Clients
 - Implement Solution for Teams
 - Implement a payment Solution / Monthly Recurring Payemnts
 - Deploy

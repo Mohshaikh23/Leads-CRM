@@ -1,0 +1,49 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+{{client.name}}
+{% endblock title %}
+
+{% block content %}
+
+    <div class="py-6 px-6">
+        <div class="flex justify-between">
+        <h1 class='mb-4 text-xl font-semibold'>{{client.name}}</h1>
+
+        <a href="{% url 'clients_list' %}" 
+            class="py-2 px-4 bg-teal-600 rounded-xl text-white">
+                Back
+        </a>
+
+        </div>
+        {% if client.description %}
+        <p class="font-semibold">Description</p>
+        <p class="mb-2">{{client.description}}</p>    
+        {% endif %}
+
+        <p class="font-semibold">Created at</p>
+        <p class="mb-2">{{client.created_at}}</p>
+
+        <p class="font-semibold">Modified at</p>
+        <p class="mb-4">{{client.modified_at}}</p>
+
+        <div class="my-4 flex space-x-1.5">
+
+
+            <a href="{% url 'edit_client' client.id %}" 
+            class="py-2 px-4 bg-blue-600 rounded-xl text-white">
+                Edit
+            </a> 
+
+            <a href="{% url 'client_delete' client.id %}" 
+            class="py-2 px-4 bg-red-600 rounded-xl text-white">
+                Delete
+            </a> 
+            
+            
+    
+        </div>        
+
+
+    </div>
+{% endblock content %}

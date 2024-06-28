@@ -3,11 +3,13 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .forms import AddLeadForm
 from .models import Lead
+from clients.models import Client
 
 # Create your views here.
 @login_required
 def leads_list(request):
-    leads = Lead.objects.filter(created_by = request.user)
+    leads = Lead.objects.filter(created_by = request.user, 
+                                converted_to_client=False)
 
     return render(request, 
                   'leads/leads_list.html',
@@ -30,7 +32,7 @@ def leads_delete(request, pk):
     lead.delete()
     messages.success(request, "The lead was Deleted successfully.")
 
-    return render('leads_list')
+    return redirect('leads_list')
 
 @login_required
 def edit_leads(request, pk):
@@ -59,7 +61,7 @@ def add_lead(request):
             lead = form.save(commit=False)
             lead.created_by = request.user
             lead.save()
-            return redirect('dashboard')
+            return redirect('leads_list')
     else:
         form = AddLeadForm()
     
@@ -67,3 +69,16 @@ def add_lead(request):
                   "leads/add_lead.html",
                   {'form':form}
                   )
+
+@login_required
+def convert_to_client(request,pk):
+    lead = get_object_or_404(Lead, created_by = request.user, pk=pk)
+
+    client = Client.objects.create(name=lead.name,
+                                  email=lead.email,
+                                  description=lead.description,
+                                  created_by = request.user)
+    lead.converted_to_client = True
+    lead.save()
+    messages.success(request, "The lead was converted to Client successfully")
+    return redirect('leads_list')
