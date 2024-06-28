@@ -9,7 +9,7 @@
 
   <body>
     <nav class="py-6 px-6 flex justify-between bg-teal-500">
-      <a href="/" class="text-white">Lead CRM</a>
+      <a href="/" class="text-white text-2xl">Lead CRM</a>
 
       <div class="flex items-center space-x-4">
         <a href="{% url 'about' %}" 
@@ -53,6 +53,16 @@
         {% endif %}
       </div>
     </nav>
+
+    {% if messages %}
+    <div class="py-6 px-6">
+      {% for message in messages  %}
+        <div class="py-4 px-4 bg-teal-300 rounded-xl">
+          {{message}}
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
 
     {% block content %} {% endblock %}
 
