@@ -34,6 +34,7 @@ class Lead(models.Model):
     status = models.CharField(max_length=10,
                                   choices=CHOICES_STATUS,
                                   default=NEW)
+    converted_to_client = models.BooleanField(default=False)
     created_by = models.ForeignKey(User, 
                                    related_name = 'leads',
                                    on_delete=models.CASCADE)

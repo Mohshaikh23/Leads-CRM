@@ -13,10 +13,10 @@ To Do List
 - Create New Leads -Done
     - New Django app - Done
     - Database models - Done
-    - Views forms for leads
-    - List out leads
-    - View details page of leads
-- Change and Delete Leads
+    - Views forms for leads - Done
+    - List out leads - Done
+    - View details page of leads - Done
+- Change and Delete Leads - Done
 - Convert leads into Clients
 - Implement Solution for Teams
 - Implement a payment Solution / Monthly Recurring Payemnts
