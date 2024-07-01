@@ -1,0 +1,25 @@
+{% extends "core/base.html" %} 
+
+{% block title %}
+    My Account
+{% endblock %} 
+
+{%block content %}
+    <div class="py-6 px-6">
+        <h1 class="mb-6 text-xl">My Account</h1>
+
+        <p class="mb-4 font-semibold">
+            Username : {{request.user.username}}
+        </p>
+
+        <p class="mb-4 font-semibold">
+            Team : {{team.name}}
+        </p>
+
+        <button 
+        type="submit" 
+        class="inline-block py-2 px-6 bg-red-400 rounded-xl text-white">
+            Log out
+        </button>
+    </div>
+{% endblock %}

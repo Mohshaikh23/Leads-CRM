@@ -18,8 +18,13 @@ To Do List
     - View details page of leads - Done
 - Change and Delete Leads - Done
 - Convert leads into Clients - Done
-- Show List of Clients
-- Show details page of Clients
+- Show List of Clients - Done
+- Show details page of Clients - Done
 - Implement Solution for Teams
+    - Create Teams App
+    - Model for Teams
+    - When you create a lead, make sure team is set
+    - When you create a client, make sure team is set
+    - If you are not a member of a team, create one
 - Implement a payment Solution / Monthly Recurring Payemnts
 - Deploy

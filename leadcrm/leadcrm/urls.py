@@ -19,13 +19,14 @@ from django.contrib import admin
 from django.contrib.auth import views
 from django.urls import path, include
 from core.views import index, about
-from userprofile.views import signup
+from userprofile.views import signup, my_account
 
 
 urlpatterns = [
     path("", index, name='index'),
     path("dashboard/", include('dashboard.urls')),
     path("dashboard/lead", include('lead.urls')),
+    path("dashboard/myaccount/", my_account, name='my_account'),
     path("dashboard/clients", include('clients.urls')),
     path("signup/", signup, name='signup'),
     path("about/", about, name='about'),

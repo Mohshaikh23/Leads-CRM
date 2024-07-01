@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Client
 from .forms import AddClientForm
 from django.contrib import messages
+from team.models import Team
 
 
 # Create your views here.
@@ -30,8 +31,10 @@ def add_client(request):
         form = AddClientForm(request.POST)
 
         if form.is_valid():
+            team = Team.objects.filter(created_by=request.user)[0]
             client = form.save(commit=False)
             client.created_by = request.user
+            client.team = team
             client.save()
             messages.success(request, 
                             "The Client was added successfully."
