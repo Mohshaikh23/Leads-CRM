@@ -7,7 +7,7 @@
     <title>{% block title %}{% endblock %}</title>
   </head>
 
-  <body>
+  <body class="bg-gradient-to-b from-violet-200 to-gray-200 h-screen">
     <nav class="py-6 px-6 flex justify-between bg-teal-500">
       <a href="/" class="text-white text-2xl">Lead CRM</a>
 
@@ -67,8 +67,8 @@
 
     {% block content %} {% endblock %}
 
-    <footer class="py-8 text-center bg-gray-200">
-      <p class="text-xs text-gray-700">
+    <footer class="fixed bottom-0 left-0 z-20 w-full py-8 text-center bg-teal-500">
+      <p class="text-xs text-white">
         Copyright (c) 2024 - Lead CRM
       </p>
     </footer>
