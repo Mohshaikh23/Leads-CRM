@@ -1,6 +1,17 @@
-H Leads CRM
+# Leads CRM
 
 Leads CRM is a web-based application developed using Python, Django, HTML, and Tailwind CSS. This application helps manage leads and clients efficiently, with features to view, add, edit, and delete records. It also includes authentication methods for secure access.
+
+## Dashboard
+![Dashboard](/Images/Dashboard.png)
+## Leads
+![Leads](/Images/Leads.png)
+## Clients
+![Clients](/Images/Clients.png)
+## Details
+![Details](/Images/Lead%20Details.png)
+## My Account
+![My Account](/Images/My%20Account.png)
 
 ## Features
 
