@@ -19,7 +19,7 @@ Leads
             <p class="py-4 px-2 bg-gray-200 font-semibold w-full">Status</p>
         </div>
         {% for lead in leads %}
-            <div class="flex justify-between bg-white">
+            <div class="flex justify-between bg-white hover:bg-green-200">
                 <p class="py-2 px-2 w-full ">
                     <a href="{% url 'leads_detail' lead.id %}">{{lead.name}}</a>
                 </p>
