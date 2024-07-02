@@ -59,7 +59,7 @@ def add_lead(request):
         form = AddLeadForm(request.POST)
 
         if form.is_valid():
-            team = Team.objects.filter(created_by=request.user)[0]
+            team = Team.objects.filter(created_by=request.user).first()
             lead = form.save(commit=False)
             lead.created_by = request.user
             lead.team = team
@@ -76,7 +76,10 @@ def add_lead(request):
 @login_required
 def convert_to_client(request,pk):
     lead = get_object_or_404(Lead, created_by = request.user, pk=pk)
-    team = Team.objects.filter(created_by=request.user)[0]
+    team = Team.objects.filter(created_by=request.user).first()
+    if not team:
+        messages.error(request, "No team found for the current user.")
+        return redirect('leads_list')
     client = Client.objects.create(name=lead.name,
                                   email=lead.email,
                                   description=lead.description,

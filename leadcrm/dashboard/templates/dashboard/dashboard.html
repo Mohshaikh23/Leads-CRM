@@ -7,10 +7,10 @@
 
   <div class="flex space-x-4">
     <div class="w-1/2 px-4 py-4 bg-gray-100 rounded-xl leads">
-      <h2 class="mb-4 text-lg ">Newest leads</h2>
+      <h2 class="mb-4 text-lg font-semibold">Newest leads</h2>
 
       {% for lead in leads %}
-        <div class="mb-2 flex space-x-20 lead">
+        <div class="mb-2 flex space-x-20 hover:bg-green-200 lead">
             <div class="w-1/2 ">
               <h3 class="font-semibold">{{lead.name}}</h3>
               <hr>
@@ -25,10 +25,10 @@
     </div>
     
     <div class="w-1/2 px-4 py-4 bg-gray-100 rounded-xl clients">
-      <h2 class="mb-4 text-lg">Newest Clients</h2>
+      <h2 class="mb-4 text-lg font-semibold">Newest Clients</h2>
 
       {% for client in clients %}
-        <div class="mb-2 flex space-x-20 client">
+        <div class="mb-2 flex space-x-20 hover:bg-green-200 client">
           <div class="w-1/2 ">
             <h3 class="font-semibold">{{client.name}}</h3>
           </div>
